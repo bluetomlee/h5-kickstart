@@ -1,0 +1,10 @@
+.DS_Store
+.svn
+.swp
+.swo
+upload.py
+eagle.py
+issue.info
+node_modules
+npm-debug.log
+dist

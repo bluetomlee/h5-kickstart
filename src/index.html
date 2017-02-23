@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>h5-kickstart</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="format-detection" content="telephone=no">
+  <script>
+      (function(win, doc){
+          var docEl = doc.documentElement;
+          var meta = doc.querySelector('viewport');
+          var dpr = 0;
+
+          function refreshRem() {
+              var clientWidth = docEl.getBoundingClientRect().width;
+              var rem = 20 * docEl.clientWidth / 375;
+              docEl.style.fontSize = rem + 'px';
+          }
+          refreshRem();
+          win.addEventListener && win.addEventListener(win['orientationchange'] ? 'orientationchange' : 'resize', refreshRem, false)
+      })(window, document);
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>
